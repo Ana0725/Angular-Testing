@@ -9,13 +9,15 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { CounterComponent } from './componentes/counter/counter.component';
 import { HeroComponent } from './componentes/heroes/hero/hero.component';
 import { ListComponent } from './componentes/heroes/list/list.component';
+import { LayoutComponent } from './componentes/tests/layout/layout.component';
 
 
 @Component({
   //decorador que tranforma mi clase a ser un componente
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,HeaderComponent,CounterComponent,HeroComponent, ListComponent],
+  imports: [CommonModule, RouterOutlet,
+    HeaderComponent,CounterComponent,HeroComponent, ListComponent,LayoutComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })

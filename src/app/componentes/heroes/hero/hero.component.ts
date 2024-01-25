@@ -9,7 +9,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './hero.component.sass'
 })
 export class HeroComponent {
-  public name:string ="ironman";
+  public name:string ="Iron man";
   public age:number=30;
 
   //getter o get 
@@ -31,6 +31,11 @@ export class HeroComponent {
 
   changeAge():void{
     this.age=20;
+  }
+
+  resetForm():void{
+    this.name='Iron man'
+    this.age=30
   }
 
 }

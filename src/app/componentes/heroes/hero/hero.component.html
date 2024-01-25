@@ -1,25 +1,27 @@
-
-
 <div class="container">
-    <h1>Spiderman</h1>
+  <h1>Spiderman</h1>
 
-    <dl>
-        <td>Nombre:</td><!--Interpolacion-->
-        <dd>{{name}}</dd>
+  <dl>
+    <td>Nombre:</td>
+    <!--Interpolacion-->
+    <dd>{{ name }}</dd>
 
-        <td>Edad:</td>
-        <dd>{{age}}</dd>
+    <td>Edad:</td>
+    <dd>{{ age }}</dd>
 
-        <td>Metodo:</td>
-        <dd>{{getHeroDescription()}}</dd>
+    <td>Metodo:</td>
+    <dd>{{ getHeroDescription() }}</dd>
 
-        <td>Capitalizado:</td>
-        <dd>{{CapitalizedName}}</dd>
-    
-    </dl>
-    <button 
-    *ngIf="name !=='Marco'"
-    (click)="changeHero()">Cambiar nombre</button>
-    <button (click)="changeAge()">Cambiar Edad </button>
+    <td>Capitalizado:</td>
+    <dd>{{ CapitalizedName }}</dd>
+  </dl>
+
+  <button *ngIf="name !== 'Marco'" (click)="changeHero()">
+    Cambiar nombre
+  </button>
+
+  <button *ngIf="age == 30" (click)="changeAge()">Edad</button>
+
+  <button (click)="resetForm()">Reset</button>
+
 </div>
-

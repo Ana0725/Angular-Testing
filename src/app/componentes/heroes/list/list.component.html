@@ -1,1 +1,26 @@
-<p>list works!</p>
+<h3>Lista de heroes</h3>
+
+<div *ngIf="deletedHero; else noDeleted">
+    <h3>Heroe eliminado <span> {{deletedHero}} </span></h3>
+</div>
+
+<!--Si no se cumple muestra una referencia local-->
+
+<ng-template #noDeleted>
+    <h3>No hay heroes eliminados</h3>
+</ng-template>
+
+
+<!-- <div *ngIf="!deletedHero">
+    <h3>No hay heroes eliminados</h3>
+</div> -->
+
+
+<button (click)="removeLastHero()" *ngIf="heroNames.length>0">
+    Eliminar ultimo heroe
+</button>
+
+
+<ul>
+    <li *ngFor="let name of heroNames">{{name}}</li>
+</ul>
